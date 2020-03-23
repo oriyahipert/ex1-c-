@@ -1,3 +1,11 @@
+/**
+ *
+ * AUTHORS: Noa Yair & Oriya Kronfeld Hipert
+ * 
+ * Date: 2020-02
+ */
+
+
 #include "doctest.h"
 #include "PhoneticFinder.hpp"
 using namespace phonetic;
@@ -6,17 +14,16 @@ using namespace phonetic;
 using namespace std;
 
 
+// TEST_CASE("Test replacement of p and b") {
+//     string text = "ccc happy yyy";
+//     CHECK(find(text, "happy") == string("happy"));
+//     CHECK(find(text, "habby") == string("happy"));
+//     CHECK(find(text, "hapby") == string("happy"));
+//     CHECK(find(text, "habpy") == string("happy"));
+//     text = "xxx bbbbb yyy";
 
-TEST_CASE("Test replacement of p and b") {
-    string text = "ccc happy yyy";
-    CHECK(find(text, "happy") == string("happy"));
-    CHECK(find(text, "habby") == string("happy"));
-    CHECK(find(text, "hapby") == string("happy"));
-    CHECK(find(text, "habpy") == string("happy"));
-    text = "xxx bbbbb yyy";
-
-    /* Add more checks here */
-}
+//     /* Add more checks here */
+// }
 
 TEST_CASE("Test replacement of v and w") {
     string text = "xxx wow yyy";
@@ -191,7 +198,21 @@ TEST_CASE("Test string not found") {
     {
         find(text, "happy");
     }
-    catch(const exception &e) // special exception type
+    catch(const exception &e) 
+    {   
+        exceptionThrown = true;
+    }
+    CHECK(exceptionThrown);
+}
+
+TEST_CASE("Test string not found") {
+    bool exceptionThrown = false;
+    string text = "Hello world";
+    try
+    {
+        find(text, " ");
+    }
+    catch(const exception &e) 
     {   
         exceptionThrown = true;
     }
