@@ -5,6 +5,13 @@
 #include <stdexcept>
 
 
+/**
+ *
+ * AUTHORS: Noa Yair & Oriya Kronfeld Hipert
+ * 
+ * Date: 2020-02
+ */
+
 using namespace std;
 
 std::string phonetic::find(std::string text, std::string word) {
