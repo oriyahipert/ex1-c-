@@ -10,7 +10,7 @@
 using namespace std;
 
 int main() {
-	string text = "Dond vorri be haffye";
+	string text = "Dond vorri be haffy";
 	//cout << "hello" << endl;
 	cout << phonetic::find(text, "dont") << endl;   // should print "Dond"
 	cout << phonetic::find(text, "worry") << endl;   // should print "vorri"
