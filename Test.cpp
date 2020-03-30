@@ -14,16 +14,16 @@ using namespace phonetic;
 using namespace std;
 
 
-// TEST_CASE("Test replacement of p and b") {
-//     string text = "ccc happy yyy";
-//     CHECK(find(text, "happy") == string("happy"));
-//     CHECK(find(text, "habby") == string("happy"));
-//     CHECK(find(text, "hapby") == string("happy"));
-//     CHECK(find(text, "habpy") == string("happy"));
-//     text = "xxx bbbbb yyy";
+TEST_CASE("Test replacement of p and b") {
+    string text = "ccc happy yyy";
+    CHECK(find(text, "happy") == string("happy"));
+    CHECK(find(text, "habby") == string("happy"));
+    CHECK(find(text, "hapby") == string("happy"));
+    CHECK(find(text, "habpy") == string("happy"));
+    text = "xxx bbbbb yyy";
 
-//     /* Add more checks here */
-// }
+    /* Add more checks here */
+}
 
 TEST_CASE("Test replacement of v and w") {
     string text = "xxx wow yyy";
